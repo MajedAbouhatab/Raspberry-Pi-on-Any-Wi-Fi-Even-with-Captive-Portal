@@ -19,7 +19,7 @@ echo Start:     $ThisNetwork \(`date "+%m/%d/%Y - %H:%M:%S"`\)
 echo Visit:     $ThatNetwork \($Time2SpendThere\)
 echo Return to: $ThisNetwork
 read -p "Ready to continue?" temp
-##############################
+#############################
 wpa_cli -i wlan0 select_network $(wpa_cli -i wlan0 list_networks|\
 grep "${ThatNetwork//\"}"|cut -c 1) &>/dev/null
 bash BrowseIt.sh &
